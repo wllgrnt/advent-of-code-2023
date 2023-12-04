@@ -4,6 +4,7 @@ Read a set of game ids + draws of blue, red, green balls, and identify which gam
 """
 
 from dataclasses import dataclass
+from ..utils import *
 
 @dataclass
 class DrawCount:
@@ -81,7 +82,6 @@ assert get_minimum_possible_cubes(test_input) == 2286
 
 if __name__ == '__main__':
 
-    with open("input.txt") as flines:
-        input = flines.read()
+    input = read_input()
     print('part 1: ', get_possible_games(input, test_known_maxes))
     print('part 2: ', get_minimum_possible_cubes(input))
